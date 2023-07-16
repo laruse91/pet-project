@@ -1,1 +1,1 @@
-export {MainPageLazy} from './MainPage.lazy'
+export { MainPageLazy } from './MainPage.lazy';

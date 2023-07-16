@@ -1,3 +1,3 @@
 export const LS = {
-  THEME: 'THEME'
-}
+  THEME: 'THEME',
+};

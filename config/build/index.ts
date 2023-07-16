@@ -1,2 +1,2 @@
-export * from './config.type'
-export {BuildWebpackConfig} from './BuildWebpackConfig'
+export * from './config.type';
+export { BuildWebpackConfig } from './BuildWebpackConfig';

@@ -1,3 +1,3 @@
-import ThemeSwitchIcon from './icons/theme-switch.svg'
+import ThemeSwitchIcon from './icons/theme-switch.svg';
 
-export {ThemeSwitchIcon}
+export { ThemeSwitchIcon };
