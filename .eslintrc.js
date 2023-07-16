@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: [
     'eslint:recommended',
@@ -39,10 +40,11 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
     'i18next/no-literal-string': ['error', { markupOnly: true }],
-    'max-len': 0,
+    'max-len': ['warn', { code: 120, ignoreComments: true, ignoreUrls: true }],
     'no-shadow': 0,
+    'no-redeclare': ['warn', { builtinGlobals: false }],
   },
   globals: {
-    __IS_DEV: true,
+    __IS_DEV__: true,
   },
 };
