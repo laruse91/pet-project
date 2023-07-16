@@ -1,26 +1,24 @@
-import React, {Suspense} from 'react'
-import './styles/index.scss'
-import {useTheme} from 'shared/theme'
-import {classNames} from 'shared/utils'
-import {AppRouter} from 'app/router'
-import {Navbar} from 'widgets/Navbar'
-import {Sidebar} from 'widgets/Sidebar'
+import { AppRouter } from 'app/router';
+import React, { Suspense } from 'react';
+import { useTheme } from 'shared/theme';
+import { classNames } from 'shared/utils';
+import { Navbar } from 'widgets/Navbar';
+import { Sidebar } from 'widgets/Sidebar';
+import './styles/index.scss';
 
-type Props = unknown
-
-export const App = ({}: Props) => {
-  const {theme} = useTheme()
+export const App = () => {
+  const { theme } = useTheme();
 
   return (
     <div className={classNames('app', {}, [theme])}>
       <Suspense>
-        <Navbar/>
+        <Navbar />
 
         <div className="page-content">
-          <Sidebar/>
-          <AppRouter/>
+          <Sidebar />
+          <AppRouter />
         </div>
       </Suspense>
     </div>
-  )
-}
+  );
+};

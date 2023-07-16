@@ -7,6 +7,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'airbnb',
+    'plugin:i18next/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -15,11 +16,11 @@ module.exports = {
     },
     ecmaVersion: 'lastest',
     sourceType: 'module',
-    // project: './tsconfig.json',
   },
   plugins: [
     'react',
     '@typescript-eslint',
+    'i18next',
   ],
   rules: {
     'react/jsx-indent': [2, 2], // отступы табуляции
@@ -27,7 +28,8 @@ module.exports = {
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/no-unresolved': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 0,
+    '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     indent: [2, 2],
     'react/require-default-props': 'off',
     'react/jsx-props-no-spreading': 'off',
@@ -36,6 +38,9 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
+    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'max-len': 0,
+    'no-shadow': 0,
   },
   globals: {
     __IS_DEV: true,

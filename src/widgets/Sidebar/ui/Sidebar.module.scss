@@ -3,7 +3,6 @@
   width: var(--sidebar-width);
   background: var(--inverted-bg-color);
   position: relative;
-
   transition: width 0.3s;
 }
 
@@ -17,7 +16,6 @@
   bottom: 20px;
   display: flex;
   justify-content: center;
-
   align-items: center;
   gap: 20px
 }
