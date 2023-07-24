@@ -1,6 +1,6 @@
-import webpack from 'webpack';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import { BuildOptions } from './config.type';
+import webpack from 'webpack'
+import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { BuildOptions } from './config.type'
 
 export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => {
   // если нет typeScript то нужен babel для jsx
@@ -8,7 +8,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     test: /\.tsx?$/,
     use: 'ts-loader',
     exclude: /node_modules/,
-  };
+  }
 
   const fileLoader = {
     test: /\.(png|jpe?g|gif)$/i,
@@ -17,13 +17,13 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
         loader: 'file-loader',
       },
     ],
-  };
+  }
 
   const svgLoader = {
     test: /\.svg$/i,
     issuer: /\.[jt]sx?$/,
     use: ['@svgr/webpack'],
-  };
+  }
 
   const babelLoader = {
     test: /\.(js|jsx|tsx)$/,
@@ -43,7 +43,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
       },
     },
 
-  };
+  }
 
   const cssLoader = {
     test: /\.s[ac]ss$/i,
@@ -63,7 +63,7 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
       // Compiles Sass to CSS
       'sass-loader',
     ],
-  };
+  }
 
   return [
     fileLoader,
@@ -71,5 +71,5 @@ export const buildLoaders = ({ isDev }: BuildOptions): webpack.RuleSetRule[] => 
     babelLoader,
     typeScriptLoader,
     cssLoader,
-  ];
-};
+  ]
+}

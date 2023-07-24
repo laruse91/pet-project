@@ -5,4 +5,4 @@ export const classNames = (cls: string, mods: Record<string, boolean> = {}, add:
     .filter(([_, value]) => !!value)
     .map(([className]) => className),
 ]
-  .join(' ');
+  .join(' ')

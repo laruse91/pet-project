@@ -1,13 +1,11 @@
 import React from 'react'
-import {useTranslation} from 'react-i18next'
+import { useTranslation } from 'react-i18next'
 
-type Props = unknown
-
-const MainPage = ({}: Props) => {
-  const {t} = useTranslation()
+const MainPage = () => {
+  const { t } = useTranslation()
   return (
     <div>
-      {t('Главная страница')}
+      { t('Главная страница') }
     </div>
   )
 }
