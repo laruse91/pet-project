@@ -1,6 +1,6 @@
 import React from 'react'
 import { Spinner } from 'shared/ui'
-import { classNames } from 'shared/utils'
+import { classNames } from 'shared/lib'
 import cl from './PageLoader.module.scss'
 
 type Props = {

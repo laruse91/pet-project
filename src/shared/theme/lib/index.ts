@@ -1,2 +1,3 @@
 export { useTheme } from './useTheme'
-export * from './models'
+export type { Theme, ThemeContextProps } from './models'
+export { THEME } from './constants'

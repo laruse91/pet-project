@@ -1,4 +1,4 @@
-import { classNames } from 'shared/utils'
+import { classNames } from 'shared/lib'
 import cl from './Button.module.scss'
 import { ButtonProps } from './Button.type'
 

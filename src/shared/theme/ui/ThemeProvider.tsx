@@ -1,18 +1,18 @@
-import React, {ReactNode, useMemo, useState} from 'react'
-import {ThemeContext} from './ThemeContext'
-import {LS} from 'shared/constants'
-import {Theme} from '../lib'
+import React, { ReactNode, useMemo, useState } from 'react'
+import { LS } from 'shared/constants'
+import { THEME, Theme } from '../lib'
+import { ThemeContext } from './ThemeContext'
 
 type Props = {
   children: ReactNode
 }
 
-const defaultTheme = localStorage.getItem(LS.THEME) as Theme || Theme.LIGHT
+const defaultTheme = localStorage.getItem(LS.THEME) as Theme
 
-export const ThemeProvider = ({children}: Props) => {
-  const [theme, setTheme] = useState<Theme>(defaultTheme)
+export const ThemeProvider = ({ children }: Props) => {
+  const [theme, setTheme] = useState<Theme>(defaultTheme || THEME.LIGHT)
 
-  const value = useMemo(() => ({theme, setTheme}), [theme])
+  const value = useMemo(() => ({ theme, setTheme }), [theme])
 
   return (
     <ThemeContext.Provider value={value}>

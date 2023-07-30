@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { Button } from 'shared/ui'
-import { classNames } from 'shared/utils'
+import { classNames } from 'shared/lib'
 import cl from './ErrorComponent.module.scss'
 
 type Props = {

@@ -1,7 +1,6 @@
-export enum Theme {
-  LIGHT = 'light',
-  DARK = 'dark',
-}
+import { THEME } from './constants'
+
+export type Theme = typeof THEME[keyof typeof THEME]
 
 export interface ThemeContextProps {
   theme?: Theme,

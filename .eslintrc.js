@@ -24,21 +24,6 @@ module.exports = {
     'i18next',
   ],
 
-  overrides: [
-    {
-      files: ['*.js', '*.jsx'],
-      rules: {
-        'no-unused-vars': [2, {
-          vars: 'all',
-          args: 'none',
-          ignoreRestSiblings: true,
-          argsIgnorePattern: '^_',
-          varsIgnorePattern: '^_',
-        }],
-      },
-    },
-  ],
-
   settings: {
     react: {
       pragma: 'React',
@@ -67,7 +52,7 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true }],
+    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
     'max-len': ['warn', { code: 120, ignoreComments: true, ignoreUrls: true }],
     'no-shadow': 0,
     'no-redeclare': ['warn', { builtinGlobals: false }],
@@ -500,4 +485,12 @@ module.exports = {
     //       },
     //     ],
   },
+  overrides: [
+    {
+      files: ['**/src/**/*.spec.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      },
+    },
+  ],
 }
