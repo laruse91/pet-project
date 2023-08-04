@@ -9,6 +9,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'airbnb',
     'plugin:i18next/recommended',
+    'plugin:storybook/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -18,12 +19,7 @@ module.exports = {
     ecmaVersion: 'lastest',
     sourceType: 'module',
   },
-  plugins: [
-    'react',
-    '@typescript-eslint',
-    'i18next',
-  ],
-
+  plugins: ['react', '@typescript-eslint', 'i18next'],
   settings: {
     react: {
       pragma: 'React',
@@ -31,13 +27,12 @@ module.exports = {
     },
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
   },
-
   globals: {
     __IS_DEV__: true,
   },
-
   rules: {
-    'react/jsx-indent': [2, 2], // отступы табуляции
+    'react/jsx-indent': [2, 2],
+    // отступы табуляции
     'react/jsx-indent-props': [2, 2],
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'import/no-unresolved': 'off',
@@ -52,14 +47,22 @@ module.exports = {
     'import/extensions': 'off',
     'import/no-extraneous-dependencies': 'off',
     'no-underscore-dangle': 'off',
-    'i18next/no-literal-string': ['error', { markupOnly: true, ignoreAttribute: ['data-testid'] }],
-    'max-len': ['warn', { code: 120, ignoreComments: true, ignoreUrls: true }],
+    'i18next/no-literal-string': ['error', {
+      markupOnly: true,
+      ignoreAttribute: ['data-testid', 'to'],
+    }],
+    'max-len': ['warn', {
+      code: 120,
+      ignoreComments: true,
+      ignoreUrls: true,
+    }],
     'no-shadow': 0,
-    'no-redeclare': ['warn', { builtinGlobals: false }],
+    'no-redeclare': ['warn', {
+      builtinGlobals: false,
+    }],
     semi: ['error', 'never'],
     'no-empty-pattern': ['warn'],
     'react/button-has-type': 0,
-
     //     'for-direction': 2,
     //     'getter-return': [2, { allowImplicit: true }],
     //     'no-await-in-loop': 0,
@@ -485,12 +488,11 @@ module.exports = {
     //       },
     //     ],
   },
-  overrides: [
-    {
-      files: ['**/src/**/*.spec.{ts,tsx}'],
-      rules: {
-        'i18next/no-literal-string': 'off',
-      },
+
+  overrides: [{
+    files: ['**/src/**/*.spec.{ts,tsx}'],
+    rules: {
+      'i18next/no-literal-string': 'off',
     },
-  ],
+  }],
 }

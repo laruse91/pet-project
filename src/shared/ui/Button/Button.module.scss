@@ -8,3 +8,17 @@
   background: none;
   border: none;
 }
+
+.btn-outlined {
+  padding: 10px 15px;
+  background: none;
+  color: var(--primary-color);
+  border:  1px solid var(--primary-color);
+}
+
+.btn-filled {
+  padding: 10px 15px;
+  background: var(--primary-color);
+  color: var(--inverted-bg-color);
+  border: var(--primary-color);
+}

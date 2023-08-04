@@ -19,7 +19,7 @@ export const ErrorComponent = ({ className }: Props) => {
     <div className={classNames(cl['error-component'], {}, [className])}>
       <div>
         <p>{ t('Упс... Произошла непредвиденная ошибка.') }</p>
-        <Button variant='primary' onClick={handleReload}>{ t('Обновить страницу') }</Button>
+        <Button variant='filled' onClick={handleReload}>{ t('Обновить страницу') }</Button>
       </div>
     </div>
   )
