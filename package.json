@@ -9,7 +9,7 @@
     "lint:fix": "yarn run lint:ts:fix; yarn run lint:scss:fix",
     "lint": "yarn run lint:ts; yarn run lint:scss",
     "test:unit": "jest",
-    "test:ui": "yarn loki test",
+    "test:ui": "yarn loki test --host host.docker.internal",
     "test:ui:approve": "yarn loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
     "lint:ts": "eslint \"**/*.{ts, tsx}\"",
@@ -23,7 +23,6 @@
   },
   "dependencies": {
     "@storybook/addon-styling": "^1.3.5",
-
     "i18next": "^23.2.11",
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-http-backend": "^2.2.1",
@@ -101,7 +100,6 @@
     "jackspeak": "2.1.1"
   },
   "loki": {
-    "chromeSelector": "#storybook-root > *",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.docker",
