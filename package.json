@@ -16,7 +16,8 @@
     "lint:scss": "yarn stylelint \"**/*.scss\"",
     "lint:scss:fix": "yarn stylelint \"**/*.scss\" --fix",
     "storybook": "storybook dev -p 6006 -c ./config/storybook",
-    "storybook:build": "storybook build -c ./config/storybook"
+    "storybook:build": "storybook build -c ./config/storybook",
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@storybook/addon-styling": "^1.3.5",
