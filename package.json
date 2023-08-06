@@ -8,7 +8,7 @@
     "build:prod": "webpack  --env mode=production",
     "lint:fix": "yarn run lint:ts:fix; yarn run lint:scss:fix",
     "lint": "yarn run lint:ts; yarn run lint:scss",
-    "test:unit": "jest --config jest.config.ts",
+    "test:unit": "jest",
     "test:ui": "yarn loki test",
     "test:ui:approve": "yarn loki approve",
     "lint:ts": "eslint \"**/*.{ts, tsx}\"",
