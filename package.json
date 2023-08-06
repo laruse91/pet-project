@@ -101,6 +101,7 @@
     "jackspeak": "2.1.1"
   },
   "loki": {
+    "chromeSelector": "#storybook-root > *",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",
