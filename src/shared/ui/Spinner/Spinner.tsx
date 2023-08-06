@@ -1,8 +1,13 @@
 import React from 'react'
+import { classNames } from 'shared/lib'
 import cl from './Spinner.module.scss'
 
-export const Spinner = () => (
-  <div className={cl['lds-ring']}>
+type Props = {
+  className?: string
+}
+
+export const Spinner = ({ className }: Props) => (
+  <div className={classNames(cl['lds-ring'], {}, [className])}>
     <div />
     <div />
     <div />
