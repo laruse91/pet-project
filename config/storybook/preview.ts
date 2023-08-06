@@ -11,6 +11,21 @@ const preview: Preview = {
         date: /Date$/,
       },
     },
+    parameters: {
+      backgrounds: {
+        default: 'light',
+        values: [
+          {
+            name: 'light',
+            value: '#e8e8ea',
+          },
+          {
+            name: 'dark',
+            value: '#090949',
+          },
+        ],
+      },
+    },
   },
   decorators: [ThemeDecorator('light'), RouterDecorator],
 }
