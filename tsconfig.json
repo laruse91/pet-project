@@ -14,10 +14,10 @@
     //      "*": ["/src/*"]
     //    }
   },
-//  "include": [
-//    "./src/app/global.d.ts",
-//    "./config/jest/jest-setup.ts"
-//  ],
+  "include": [
+    "src",
+    "./config"
+  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJs"
