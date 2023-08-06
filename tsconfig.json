@@ -14,10 +14,10 @@
     //      "*": ["/src/*"]
     //    }
   },
-  "include": [
-    "src",
-    "./config"
-  ],
+//  "include": [
+//    "src",
+//    "./config"
+//  ],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJs"

@@ -20,9 +20,6 @@ jobs:
       - name: install modules
         run: yarn install
 
-      - name: build production project
-        run: yarn run build:prod
-
       - name: linting ts
         run: yarn run lint:ts
       - name: linting scss
@@ -31,4 +28,5 @@ jobs:
       - name: unit testing
         run: yarn run test:unit
 
-
+      - name: build production project
+        run: yarn run build:prod
