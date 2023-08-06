@@ -5,6 +5,9 @@ import { BuildPath } from '../build'
 import { cssLoader, svgLoader } from '../build/loaders'
 
 const config: StorybookConfig = {
+  features: {
+    storyStoreV7: false,
+  },
   stories: [
     '../../src/**/*.stories.@(js|jsx|mjs|ts|tsx)',
   ],
